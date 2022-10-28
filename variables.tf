@@ -1,14 +1,12 @@
 variable "aws" {
 
-  type = object({
-    profile = string
-    region  = string
-  })
+  type = map(string)
 
   default = (
     {
-      profile = "dev"
       region  = "us-east-1"
+      access_key = ""
+      secret_key = ""
     }
   )
 
