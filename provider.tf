@@ -5,10 +5,18 @@ terraform {
       version = "~> 4.0"
     }
   }
+
+  cloud {
+    organization = "gustavokuhl"
+
+    workspaces {
+      name = "gh-actions"
+    }
+  }
 }
 
 provider "aws" {
-  region = var.aws.region
-  access_key = var.aws.access_key
-  secret_key = var.aws.secret_key
+  region     = var.AWS_DEFAULT_REGION
+  access_key = var.AWS_ACCESS_KEY_ID
+  secret_key = var.AWS_SECRET_ACCESS_KEY
 }

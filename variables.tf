@@ -1,14 +1,19 @@
-variable "aws" {
+variable "AWS_ACCESS_KEY_ID" {
+  type    = string
+  default = ""
+}
 
-  type = map(string)
+variable "AWS_SECRET_ACCESS_KEY" {
+  type    = string
+  default = ""
+}
 
-  default = (
-    {
-      region  = "us-east-1"
-      access_key = ""
-      secret_key = ""
-      key_pair_name = ""
-    }
-  )
+variable "AWS_DEFAULT_REGION" {
+  type    = string
+  default = "us-east-1"
+}
 
+variable "AWS_KEY_PAIR_NAME" {
+  type    = string
+  default = "dev"
 }

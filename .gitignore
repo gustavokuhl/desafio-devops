@@ -38,3 +38,6 @@ terraform.rc
 
 # Ignore vscode files
 .vscode
+
+# Ignore env file
+.env
