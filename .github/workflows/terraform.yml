@@ -78,5 +78,5 @@ jobs:
         continue-on-error: true
 
       - name: Terraform Destroy
-        # if: github.event.action == 'closed' && github.event.pull_request.merged == false
+        if: github.event.action == 'closed' && github.event.pull_request.merged == false
         run: terraform destroy -auto-approve -input=false
