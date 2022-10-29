@@ -76,7 +76,3 @@ jobs:
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve -input=false
         continue-on-error: true
-
-      - name: Terraform Destroy
-        if: github.event.action == 'closed' && github.event.pull_request.merged == false
-        run: terraform destroy -auto-approve -input=false
