@@ -29,8 +29,36 @@ Criei uma API key e salve-a.
 
 ### Github
 
-Clone o repositório e adicione como secret as seguintes variáveis com o valor da credencial do Terraform Cloud:
+Faça um fork do repositório e adicione como secret as seguintes variáveis com o valor da credencial do Terraform Cloud:
 - TF_API_TOKEN
+
+## Como rodar
+
+Com o Fork do repositório, clone o Fork (esse repositório dentro do SEU Github).
+
+Crie uma branch do projeto.
+
+```bash
+git checkout -b workspace-name
+```
+
+Altere o arquivo [provider.tf](https://github.com/gustavokuhl/desafio-devops/blob/main/provider.tf), alterando os valores de organization e workspace.name.
+
+Commite o arquivo e envie ele para o repositório
+
+```bash
+git add .
+git commit -m "refactor(provider.tf): change the terraform cloud data"
+git push -u origin workspace-name
+```
+
+Abra o seu repositório no Github e crie uma PR com a sua alteração, trazendo da branch `workspace-name` para a `main`.
+
+Verifique o resultado da action de Terraform plan.
+
+Realize o merge das alterações.
+
+Verique a nova action de Terraform apply que será executada.
 
 ## Workflow
 
